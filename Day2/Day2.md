@@ -1,0 +1,1 @@
+Today I learnt about data types and how to manipulate strings.

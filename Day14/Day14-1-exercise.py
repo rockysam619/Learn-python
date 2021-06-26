@@ -3,6 +3,10 @@ from art import logo
 from art import vs
 from game_data import data
 import random
+import os
+
+def clear(): 
+    os.system('cls')
 
 def choose_data(data):
     A = random.choice(data)
@@ -28,6 +32,7 @@ def high_low_game():
         print(f"Against B: {B['name']}, {B['description']}, from {B['country']}")
         u_choice = input("\nWho has more followers? Type A or B: ")
         if compare(A, B) == u_choice:
+            clear()
             current_score+=1
             print(f"\nYou're right! Current score: {current_score}")
             A = B

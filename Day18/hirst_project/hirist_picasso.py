@@ -1,4 +1,4 @@
-#This will create a dotted hirst painting
+#This will create a dotted hirst painting yes it is
 from turtle import Turtle, Screen 
 import random
 timmy = Turtle()

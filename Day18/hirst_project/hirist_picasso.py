@@ -1,3 +1,4 @@
+#This will create a dotted hirst painting
 from turtle import Turtle, Screen 
 import random
 timmy = Turtle()

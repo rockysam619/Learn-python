@@ -11,11 +11,18 @@ class Snake:
 
     def draw_snake(self):
         for _ in STARTING_POINTS:
-            snake = Turtle(shape = "square")
-            snake.color("white")
-            snake.penup()
-            snake.goto(_)
-            self.segment.append(snake)
+            self.add_segment(_)
+
+    def add_segment(self, position):
+        new_seg = Turtle(shape = "square")
+        new_seg.color("white")
+        new_seg.speed("fastest")
+        new_seg.penup()
+        new_seg.goto(position)
+        self.segment.append(new_seg)
+
+    def extend_snake(self):
+        self.add_segment(self.segment[-1].position())
 
     def move_snake(self):
         for seg_num in range(len(self.segment) -1, 0, -1):
